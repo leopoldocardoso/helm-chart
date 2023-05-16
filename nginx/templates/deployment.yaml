@@ -31,7 +31,7 @@ spec:
               cpu: {{ .Values.resources.limits.cpu }}
           readinessProbe:
             initialDelaySeconds: 5
-            #sucessTreshold: 1
+            successThreshold: 1
             failureThreshold: 5
             periodSeconds: 5
             httpGet:
@@ -40,7 +40,7 @@ spec:
           livenessProbe:
             initialDelaySeconds: 5
             periodSeconds: 5
-            #sucessThreshold: 1
+            successThreshold: 1
             failureThreshold: 35
             exec:
               command:
