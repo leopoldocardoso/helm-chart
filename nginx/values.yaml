@@ -1,0 +1,19 @@
+# Deploy
+replicaCount: 4
+# Container
+image:
+  repository: nginx
+  tag: latest
+
+# Resources
+resources:
+  requests:
+    memory: 250Mi
+    cpu: "0.1"
+  limits:
+    memory: "800Mi"
+    cpu: "0.8"
+
+
+
+

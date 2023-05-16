@@ -1,0 +1,7 @@
+apiVersion: v1
+name: mychart
+version: v1.0
+description: My first chart with helm
+maintainers:
+  - name: Leopoldo Cardoso
+    email: leopoldo.cardoso@lpcinfo.com.br
