@@ -29,20 +29,25 @@ spec:
             limits:
               memory: {{ .Values.resources.limits.memory }}
               cpu: {{ .Values.resources.limits.cpu }}
+          env:
+            - name: {{ .Chart.Name }}-nome
+              value: {{ .Values.configmap.dadossre.name }}
+            - name: {{ .Chart.Name }}-email
+              value: {{ .Values.configmap.dadossre.email }}
           readinessProbe:
-            initialDelaySeconds: 5
-            successThreshold: 1
-            failureThreshold: 5
-            periodSeconds: 5
-            httpGet:
+             initialDelaySeconds: {{ .Values.readinessprobe.initialDelaySeconds }}
+             successThreshold: {{ .Values.readinessprobe.successThresolhd }}
+             failureThreshold: {{ .Values.readinessprobe.failureThreshold }}
+             periodSeconds: {{ .Values.readinessprobe.periodSeconds }}
+             httpGet:
               path: /
               port: 80
           livenessProbe:
-            initialDelaySeconds: 5
-            periodSeconds: 5
-            successThreshold: 1
-            failureThreshold: 35
-            exec:
+             initialDelaySeconds: {{ .Values.livenessprobe.initialDelaySeconds }}
+             successThreshold: {{ .Values.livenessprobe.successThresolhd }}
+             failureThreshold: {{ .Values.livenessprobe.failureThreshold }}
+             periodSeconds: {{ .Values.livenessprobe.periodSeconds }}
+             exec:
               command:
                 - curl
                 - http://localhost:80

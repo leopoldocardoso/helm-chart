@@ -14,6 +14,23 @@ resources:
     memory: "800Mi"
     cpu: "0.8"
 
+# ConfigMap
+configmap:
+  dadossre:
+    name: Leopoldo P. Cardoso
+    email: leopoldo.cardoso@lpcinfo.com.br
 
+# Readiness
+readinessprobe:
+  initialDelaySeconds: 5
+  successThreshold: 1
+  failureThreshold: 5
+  periodSeconds: 5
 
+# Liveness
+livenessprobe:
+  initialDelaySeconds: 5
+  successThreshold: 1
+  failureThreshold: 5
+  periodSeconds: 5
 
