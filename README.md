@@ -10,5 +10,6 @@ R: De acordo com a documentação o Helm é um gerenciador de pacotes para Kuber
 Da mesma forma que utilizamos apt install ou yum install para instalação de pacotes em ambientes Linux, utilizamos helm install para instalar pacotes no kubernetes.
 site da documentação: https://helm.sh/
 
+<img srv=/Users/leopoldo/helm-chart/teste/teste.png">
 
 **Obs: Readme e Deploy ainda em construção**
