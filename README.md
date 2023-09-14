@@ -11,6 +11,6 @@ Da mesma forma que utilizamos apt install ou yum install para instalação de pa
 site da documentação: https://helm.sh/
 
 
-![Texto Alternativo]https://github.com/leopoldocardoso/helm-chart/tree/main/teste/teste.png
+![Texto Alternativo](https://github.com/leopoldocardoso/helm-chart/tree/main/teste/teste.png)
 
 **Obs: Readme e Deploy ainda em construção**
